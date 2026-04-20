@@ -127,3 +127,89 @@ footer {
   font-size: 0.85rem;
 }
 footer a { color: var(--accent); }
+
+/* Variant dropdown */
+.variant-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.variant-row select {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  font-size: 0.9rem;
+  min-width: 18rem;
+  max-width: 100%;
+  font-family: inherit;
+}
+
+/* Inline muted helper paragraphs */
+.muted { color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 1rem; }
+
+/* Note fallback inside cards (when no glyph/text data is available) */
+.card .note {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  font-style: italic;
+}
+
+/* Page-glyph sample: each PUA glyph is one word.
+   PUA codepoints are LTR by default in Unicode bidi — force them to
+   render in RTL visual order so line wrapping matches reading order. */
+.sample-glyph {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  text-align: center;
+  line-height: 2;
+}
+
+/* Glyph grid for other-fonts tables */
+.glyph-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+.glyph {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.25rem;
+  text-align: center;
+  background: var(--bg);
+  overflow: hidden;            /* clip any residual bleed */
+}
+.glyph .g {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  min-height: 2.2rem;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.glyph .g > span {
+  display: inline-block;
+  transform-origin: center;    /* JS sets `transform: scale(...)` when too wide */
+  white-space: nowrap;
+}
+.glyph .cp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+.glyph .lbl {
+  font-size: 0.65rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+  line-height: 1.2;
+}

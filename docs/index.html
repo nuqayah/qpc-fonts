@@ -6,202 +6,230 @@
 <title>QPC Fonts — Preview</title>
 <link rel="stylesheet" href="assets/preview.css">
 <style>
-/* ==== Non-mushaf fonts ==== */
-@font-face {
-  font-family: 'Uthman Naskh';
-  src: local('KFGQPC Uthman Taha Naskh'),
-       url('../other-fonts/fonts/UthmanTN1%20Ver10.woff2') format('woff2'),
-       url('../other-fonts/fonts/UthmanTN1%20Ver10.woff')  format('woff');
-}
-@font-face {
-  font-family: 'Uthman Naskh';
-  font-weight: bold;
-  src: local('KFGQPC Uthman Taha Naskh Bold'), local('KFGQPCUthmanTahaNaskh-Bold'),
-       url('../other-fonts/fonts/UthmanTN1B%20Ver10.woff2') format('woff2'),
-       url('../other-fonts/fonts/UthmanTN1B%20Ver10.woff')  format('woff');
-}
-@font-face {
-  font-family: 'Uthman Hafs';
-  src: local('KFGQPC Uthmanic Script HAFS'),
-       url('../other-fonts/fonts/UthmanicHafs1%20Ver09.woff2') format('woff2'),
-       url('../other-fonts/fonts/UthmanicHafs1%20Ver09.woff')  format('woff');
-}
-@font-face {
-  font-family: 'QPC Symbols';
-  src: local('KFGQPC Arabic Symbols 01'),
-       url('../other-fonts/fonts/Symbols1_Ver02.woff2') format('woff2');
-}
-
-/* ==== Hafs page-glyph families (one glyph = one word; see each version's data/mushaf.txt) ==== */
-@font-face {
-  font-family: 'Mushaf v1 Basmalah';
-  src: local('QCF_BSML'),
-       url('../hafs-glyphs/v1/fonts/QCF_BSML.woff2') format('woff2'),
-       url('../hafs-glyphs/v1/fonts/QCF_BSML.woff')  format('woff');
-}
-@font-face {
-  font-family: 'Mushaf v1 Page 1';
-  src: local('QCF_P001'),
-       url('../hafs-glyphs/v1/fonts/QCF_P001.woff2') format('woff2'),
-       url('../hafs-glyphs/v1/fonts/QCF_P001.woff')  format('woff');
-}
+@font-face { font-family: 'Uthmanic Hafs v22'; src: url('../hafs/text/UthmanicHafs_V22/uthmanic_hafs_v22.ttf') format('truetype'); }
+@font-face { font-family: 'Uthman Hafs'; src: url('../hafs/fonts/UthmanicHafs1%20Ver09.woff2') format('woff2'); }
+@font-face { font-family: 'Uthmanic Hafs1 v13'; src: url('../hafs/text/UthmanicHafs1_Ver13/UthmanicHafs1%20Ver13.ttf') format('truetype'); }
+@font-face { font-family: 'Uthmanic Hafs1 v13 Bold'; src: url('../hafs/text/UthmanicHafs1_Ver13/UthmanicHafs1B%20Ver13.ttf') format('truetype'); }
+@font-face { font-family: 'Uthmanic Hafs v2-1'; src: url('../hafs/text/UthmanicHafs_v2-1/UthmanicHafs_v2-1.ttf') format('truetype'); }
+@font-face { font-family: 'Uthmanic Hafs V20'; src: url('../hafs/text/UthmanicHafs_v20_-font/UthmanicHafs_V20.ttf') format('truetype'); }
+@font-face { font-family: 'Hafs Nastaleeq'; src: url('../hafs/text/HafsNastaleeq%20Ver10/HafsNastaleeq%20Ver10.otf') format('opentype'); }
+@font-face { font-family: 'Mushaf v1 P042'; src: url('../hafs-glyphs/v1/fonts/QCF_P042.ttf') format('truetype'); }
+@font-face { font-family: 'Mushaf v1.5 P042'; src: url('../hafs-glyphs/v1.5/fonts/page_42.ttf') format('truetype'); }
+@font-face { font-family: 'Mushaf v2 P042'; src: url('../hafs-glyphs/v2/fonts/QCF2042.ttf') format('truetype'); }
+@font-face { font-family: 'Mushaf v4 Hafs'; src: url('../hafs-glyphs/v4/fonts/QCF4_Hafs_04_W.ttf') format('truetype'); }
+@font-face { font-family: 'Uthmanic Warsh'; src: url('../warsh/text/UthmanicWarsh_V21/UthmanicWarsh%20V21.ttf') format('truetype'); }
+@font-face { font-family: 'Mushaf v4 Warsh'; src: url('../warsh-glyphs/v4/fonts/QCF4_Warsh_04_W.ttf') format('truetype'); }
+@font-face { font-family: 'Uthmanic Qaloun'; src: url('../qaloun/text/UthmanicQaloun_V21/UthmanicQaloun%20V21.ttf') format('truetype'); }
+@font-face { font-family: 'Uthmanic Bazzi'; src: url('../bazzi/text/UthmanicBazzi_V20/UthmanicBazzi%20V20.ttf') format('truetype'); }
+@font-face { font-family: 'Uthmanic Douri'; src: url('../douri/text/UthmanicDouri_V20/UthmanicDouri%20V20.ttf') format('truetype'); }
+@font-face { font-family: 'Uthmanic Qunbul'; src: url('../qunbul/text/UthmanicQunbul_V20/UthmanicQunbul%20V20.ttf') format('truetype'); }
+@font-face { font-family: 'Uthmanic Shuba'; src: url('../shuba/text/UthmanicShuba_V20/UthmanicShuba%20V20.ttf') format('truetype'); }
+@font-face { font-family: 'Uthmanic Sousi'; src: url('../sousi/text/UthmanicSousi_V20/UthmanicSousi%20V20.ttf') format('truetype'); }
+@font-face { font-family: 'Uthman Naskh'; src: local('KFGQPC Uthman Taha Naskh'), url('../other-fonts/fonts/UthmanTN1%20Ver10.woff2') format('woff2'); }
+@font-face { font-family: 'Uthman Naskh'; font-weight: bold; src: local('KFGQPC Uthman Taha Naskh Bold'), url('../other-fonts/fonts/UthmanTN1B%20Ver10.woff2') format('woff2'); }
+@font-face { font-family: 'QPC Symbols'; src: local('KFGQPC Arabic Symbols 01'), url('../other-fonts/fonts/Symbols1_Ver02.woff2') format('woff2'); }
+@font-face { font-family: 'QPC Basmalah'; src: local('QCF_BSML'), url('../hafs-glyphs/v1/fonts/QCF_BSML.woff2') format('woff2'); }
 </style>
 </head>
 <body>
 
 <header>
   <h1>QPC Fonts <span class="ar">خطوط المجمع</span></h1>
-  <p>Fonts from the King Fahd Glorious Qur'an Printing Complex, grouped by riwaya.
-     Source repo: <a href="https://github.com/nuqayah/qpc-fonts">nuqayah/qpc-fonts</a>.</p>
+  <p>Each riwaya renders <strong>Ayat al-Kursi</strong> (2:255) from its own source. Where a riwaya has multiple font versions, switch with the dropdown.
+  Source: <a href="https://github.com/nuqayah/qpc-fonts">nuqayah/qpc-fonts</a>.</p>
   <nav>
-    <a href="#hafs">Hafs</a>
-    <a href="#warsh">Warsh</a>
-    <a href="#qaloun">Qaloun</a>
-    <a href="#bazzi">Bazzi</a>
-    <a href="#douri">Douri</a>
-    <a href="#qunbul">Qunbul</a>
-    <a href="#shuba">Shuba</a>
-    <a href="#sousi">Sousi</a>
+    <a href="#hafs">Hafs</a> <a href="#warsh">Warsh</a> <a href="#qaloun">Qaloun</a> <a href="#bazzi">Bazzi</a> <a href="#douri">Douri</a> <a href="#qunbul">Qunbul</a> <a href="#shuba">Shuba</a> <a href="#sousi">Sousi</a>
     <a href="#other">Other fonts</a>
+    <a href="#glyph-inventory">Icon glyphs</a>
     <a href="demo.html">@font-face recipe →</a>
   </nav>
 </header>
 
 <section class="riwaya" id="hafs">
-  <h2>Hafs <span class="count">page-glyph versions: v1, v1.5, v2, v4 · text sources: 5</span></h2>
-
-  <h3>Page-glyph fonts</h3>
-  <p style="color:var(--muted);font-size:.9rem;margin:0 0 .5rem">
-    These fonts render one word per glyph, pinned to a specific mushaf page.
-    They require the matching <code>data/mushaf.txt</code> to produce readable text.
-    The samples below show <em>QCF_BSML</em> (basmalah) and page 1 of v1 as a visual check only.
-  </p>
-
-  <div class="card">
-    <div class="meta">
-      <span class="family">Mushaf v1 · Basmalah</span>
-      <span class="path">hafs-glyphs/v1/fonts/QCF_BSML.*</span>
-    </div>
-    <div class="sample sample-large" style="font-family:'Mushaf v1 Basmalah'">ﱁﱂﱃﱄ</div>
+  <h2>Hafs</h2>
+  <div class="variant-row">
+    <label for="select-hafs">Variant:&nbsp;</label>
+    <select id="select-hafs" data-riwaya="hafs"></select>
   </div>
-
-  <div class="card">
-    <div class="meta">
-      <span class="family">Mushaf v1 · Page 1</span>
-      <span class="path">hafs-glyphs/v1/fonts/QCF_P001.*</span>
-    </div>
-    <div class="sample sample-large" style="font-family:'Mushaf v1 Page 1'">ﭑﭒﭓﭔ</div>
-    <details>
-      <summary>@font-face</summary>
-<pre>@font-face {
-  font-family: 'Mushaf Page NNN';
-  src: local('QCF_PNNN'),
-       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/hafs-glyphs/v1/fonts/QCF_PNNN.woff2') format('woff2');
-}</pre>
-    </details>
+  <div class="card" id="card-hafs">
+    <div class="meta"><span class="family" id="family-hafs"></span></div>
+    <div class="sample sample-large" id="sample-hafs"></div>
+    <div class="note" id="note-hafs" style="display:none"></div>
   </div>
-
-  <h3>Text sources</h3>
-  <p style="color:var(--muted);font-size:.9rem">
-    Source text (docx/txt/json) for Hafs — not renderable here; see
-    <a href="https://github.com/nuqayah/qpc-fonts/tree/master/hafs/text">hafs/text/</a>:
-    <code>UthmanicHafs_V22</code>, <code>UthmanicHafs1_Ver13</code>, <code>UthmanicHafs_v2-1</code>,
-    <code>UthmanicHafs_v20_-font</code>, <code>HafsNastaleeq&nbsp;Ver10</code>.
-  </p>
 </section>
-
 <section class="riwaya" id="warsh">
-  <h2>Warsh <span class="count">page-glyph versions: v4 · text source: UthmanicWarsh_V21</span></h2>
-  <p style="color:var(--muted);font-size:.9rem">
-    Page-glyph v4 at <a href="https://github.com/nuqayah/qpc-fonts/tree/master/warsh-glyphs/v4/fonts">warsh-glyphs/v4/fonts</a>.
-    Text source at <a href="https://github.com/nuqayah/qpc-fonts/tree/master/warsh/text">warsh/text/UthmanicWarsh_V21</a>.
-  </p>
+  <h2>Warsh</h2>
+  <div class="variant-row">
+    <label for="select-warsh">Variant:&nbsp;</label>
+    <select id="select-warsh" data-riwaya="warsh"></select>
+  </div>
+  <div class="card" id="card-warsh">
+    <div class="meta"><span class="family" id="family-warsh"></span></div>
+    <div class="sample sample-large" id="sample-warsh"></div>
+    <div class="note" id="note-warsh" style="display:none"></div>
+  </div>
 </section>
-
 <section class="riwaya" id="qaloun">
-  <h2>Qaloun <span class="count">text source: UthmanicQaloun_V21</span></h2>
-  <p style="color:var(--muted);font-size:.9rem">
-    Text-only (no page-glyph fonts in the repo). See
-    <a href="https://github.com/nuqayah/qpc-fonts/tree/master/qaloun/text">qaloun/text/</a>.
-  </p>
+  <h2>Qaloun</h2>
+  <div class="variant-row">
+    <label for="select-qaloun">Variant:&nbsp;</label>
+    <select id="select-qaloun" data-riwaya="qaloun"></select>
+  </div>
+  <div class="card" id="card-qaloun">
+    <div class="meta"><span class="family" id="family-qaloun"></span></div>
+    <div class="sample sample-large" id="sample-qaloun"></div>
+    <div class="note" id="note-qaloun" style="display:none"></div>
+  </div>
 </section>
-
 <section class="riwaya" id="bazzi">
-  <h2>Bazzi <span class="count">text source: UthmanicBazzi_V20</span></h2>
-  <p style="color:var(--muted);font-size:.9rem">
-    Text-only. See <a href="https://github.com/nuqayah/qpc-fonts/tree/master/bazzi/text">bazzi/text/</a>.
-  </p>
+  <h2>Bazzi</h2>
+  <div class="variant-row">
+    <label for="select-bazzi">Variant:&nbsp;</label>
+    <select id="select-bazzi" data-riwaya="bazzi"></select>
+  </div>
+  <div class="card" id="card-bazzi">
+    <div class="meta"><span class="family" id="family-bazzi"></span></div>
+    <div class="sample sample-large" id="sample-bazzi"></div>
+    <div class="note" id="note-bazzi" style="display:none"></div>
+  </div>
 </section>
-
 <section class="riwaya" id="douri">
-  <h2>Douri <span class="count">text source: UthmanicDouri_V20</span></h2>
-  <p style="color:var(--muted);font-size:.9rem">
-    Text-only. See <a href="https://github.com/nuqayah/qpc-fonts/tree/master/douri/text">douri/text/</a>.
-  </p>
+  <h2>Douri</h2>
+  <div class="variant-row">
+    <label for="select-douri">Variant:&nbsp;</label>
+    <select id="select-douri" data-riwaya="douri"></select>
+  </div>
+  <div class="card" id="card-douri">
+    <div class="meta"><span class="family" id="family-douri"></span></div>
+    <div class="sample sample-large" id="sample-douri"></div>
+    <div class="note" id="note-douri" style="display:none"></div>
+  </div>
 </section>
-
 <section class="riwaya" id="qunbul">
-  <h2>Qunbul <span class="count">text source: UthmanicQunbul_V20</span></h2>
-  <p style="color:var(--muted);font-size:.9rem">
-    Text-only. See <a href="https://github.com/nuqayah/qpc-fonts/tree/master/qunbul/text">qunbul/text/</a>.
-  </p>
+  <h2>Qunbul</h2>
+  <div class="variant-row">
+    <label for="select-qunbul">Variant:&nbsp;</label>
+    <select id="select-qunbul" data-riwaya="qunbul"></select>
+  </div>
+  <div class="card" id="card-qunbul">
+    <div class="meta"><span class="family" id="family-qunbul"></span></div>
+    <div class="sample sample-large" id="sample-qunbul"></div>
+    <div class="note" id="note-qunbul" style="display:none"></div>
+  </div>
 </section>
-
 <section class="riwaya" id="shuba">
-  <h2>Shuba <span class="count">text source: UthmanicShuba_V20</span></h2>
-  <p style="color:var(--muted);font-size:.9rem">
-    Text-only. See <a href="https://github.com/nuqayah/qpc-fonts/tree/master/shuba/text">shuba/text/</a>.
-  </p>
+  <h2>Shuba</h2>
+  <div class="variant-row">
+    <label for="select-shuba">Variant:&nbsp;</label>
+    <select id="select-shuba" data-riwaya="shuba"></select>
+  </div>
+  <div class="card" id="card-shuba">
+    <div class="meta"><span class="family" id="family-shuba"></span></div>
+    <div class="sample sample-large" id="sample-shuba"></div>
+    <div class="note" id="note-shuba" style="display:none"></div>
+  </div>
 </section>
-
 <section class="riwaya" id="sousi">
-  <h2>Sousi <span class="count">text source: UthmanicSousi_V20</span></h2>
-  <p style="color:var(--muted);font-size:.9rem">
-    Text-only. See <a href="https://github.com/nuqayah/qpc-fonts/tree/master/sousi/text">sousi/text/</a>.
-  </p>
+  <h2>Sousi</h2>
+  <div class="variant-row">
+    <label for="select-sousi">Variant:&nbsp;</label>
+    <select id="select-sousi" data-riwaya="sousi"></select>
+  </div>
+  <div class="card" id="card-sousi">
+    <div class="meta"><span class="family" id="family-sousi"></span></div>
+    <div class="sample sample-large" id="sample-sousi"></div>
+    <div class="note" id="note-sousi" style="display:none"></div>
+  </div>
 </section>
 
 <section class="riwaya" id="other">
-  <h2>Other fonts <span class="count">cross-riwaya / non-mushaf · other-fonts/fonts/</span></h2>
+  <h2>Other fonts <span class="count">general Arabic text · not Qur'an-specific</span></h2>
+  <p class="muted">Uthman Naskh is a general-purpose Arabic text face from the KFGQPC — not a Qur'an font and not tied to any riwaya. Sample text is a saying of Wuhayb ibn al-Ward on the Qur'an.</p>
 
   <div class="card">
-    <div class="meta">
-      <span class="family">Uthman Naskh</span>
-      <span class="path">UthmanTN1 Ver10.*</span>
-    </div>
-    <div class="sample" style="font-family:'Uthman Naskh'">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
-    <div class="sample" style="font-family:'Uthman Naskh'">ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ</div>
+    <div class="meta"><span class="family">Uthman Naskh</span><span class="path">other-fonts/fonts/UthmanTN1 Ver10.*</span></div>
+    <div class="sample" style="font-family:'Uthman Naskh'">قال وهيب بن الورد رحمه الله: لم نجد شيئًا أرقَّ لهذه القلوب ولا أشد استجلابًا للحق من قراءة القرآن لمن تدبَّره.</div>
   </div>
 
   <div class="card">
-    <div class="meta">
-      <span class="family">Uthman Naskh (Bold)</span>
-      <span class="path">UthmanTN1B Ver10.*</span>
-    </div>
-    <div class="sample" style="font-family:'Uthman Naskh';font-weight:bold">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+    <div class="meta"><span class="family">Uthman Naskh (Bold)</span><span class="path">other-fonts/fonts/UthmanTN1B Ver10.*</span></div>
+    <div class="sample" style="font-family:'Uthman Naskh';font-weight:bold">قال وهيب بن الورد رحمه الله: لم نجد شيئًا أرقَّ لهذه القلوب ولا أشد استجلابًا للحق من قراءة القرآن لمن تدبَّره.</div>
+  </div>
+</section>
+
+<section class="riwaya" id="glyph-inventory">
+  <h2>Icon-font glyph inventories <span class="count">QPC Symbols &amp; QCF_BSML</span></h2>
+  <p class="muted">These fonts are glyph inventories — each codepoint draws a single figure (a mark or a ligature), not a letter you can compose. Other QPC fonts (text and page-glyph) are demonstrated above in the riwaya sections.</p>
+
+  <div class="card">
+    <div class="meta"><span class="family">QPC Symbols</span><span class="path">other-fonts/fonts/Symbols1_Ver02.*</span></div>
+    <p class="muted" style="margin:.25rem 0">All 97 glyphs in the font, from its private-use codepoint range U+F020–U+F084 (mushaf annotation marks, sajdah/waqf stops, rub el hizb, end-of-ayah markers, juz/hizb numbers, etc.).</p>
+    <div class="glyph-grid" dir="ltr"><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F020</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F021</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F022</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F023</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F024</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F025</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F026</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F027</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F028</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F029</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F02A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F02B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F02C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F02D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F02E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F02F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F030</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F031</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F032</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F033</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F034</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F035</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F036</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F037</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F038</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F039</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F03A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F03B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F03C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F03D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F03E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F03F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F040</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F041</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F042</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F043</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F044</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F045</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F046</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F047</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F048</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F049</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F04A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F04B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F04C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F04D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F04E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F04F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F050</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F051</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F052</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F053</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F054</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F055</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F056</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F057</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F058</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F059</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F05A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F05B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F05C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F05D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F05E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F05F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F060</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F061</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F062</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F063</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F064</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F065</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F066</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F067</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F068</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F069</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F06A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F06B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F06C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F06D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F06E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F06F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F070</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F071</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F072</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F073</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F074</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F075</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F076</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F077</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F078</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F079</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F07A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F07B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F07C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F07D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F07E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F083</div></div><div class="glyph"><div class="g" style="font-family:'QPC Symbols';font-size:2rem"><span></span></div><div class="cp">U+F084</div></div></div>
   </div>
 
   <div class="card">
-    <div class="meta">
-      <span class="family">Uthman Hafs</span>
-      <span class="path">UthmanicHafs1 Ver09.*</span>
-    </div>
-    <div class="sample" style="font-family:'Uthman Hafs'">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
-    <div class="sample" style="font-family:'Uthman Hafs'">ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ</div>
-  </div>
-
-  <div class="card">
-    <div class="meta">
-      <span class="family">QPC Symbols</span>
-      <span class="path">Symbols1_Ver02.*</span>
-    </div>
-    <div class="sample" style="font-family:'QPC Symbols'">۝۞ۖۗۘۙۚۛ</div>
+    <div class="meta"><span class="family">QCF_BSML (Basmalah set)</span><span class="path">hafs-glyphs/v1/fonts/QCF_BSML.*</span></div>
+    <p class="muted" style="margin:.25rem 0">All 231 glyphs in the font. The primary basmalah reads <span style="font-family:'QPC Basmalah';font-size:1.6rem">ﭑﭒﭓﭔﭕﭖ</span>; the rest are alternate ligatures and fragments used across mushaf variants.</p>
+    <div class="glyph-grid" dir="rtl"><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭐ</span></div><div class="cp">U+FB50</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭑ</span></div><div class="cp">U+FB51</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭒ</span></div><div class="cp">U+FB52</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭓ</span></div><div class="cp">U+FB53</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭔ</span></div><div class="cp">U+FB54</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭕ</span></div><div class="cp">U+FB55</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭖ</span></div><div class="cp">U+FB56</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭗ</span></div><div class="cp">U+FB57</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭘ</span></div><div class="cp">U+FB58</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭙ</span></div><div class="cp">U+FB59</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭚ</span></div><div class="cp">U+FB5A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭛ</span></div><div class="cp">U+FB5B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭜ</span></div><div class="cp">U+FB5C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭝ</span></div><div class="cp">U+FB5D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭞ</span></div><div class="cp">U+FB5E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭟ</span></div><div class="cp">U+FB5F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭠ</span></div><div class="cp">U+FB60</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭡ</span></div><div class="cp">U+FB61</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭢ</span></div><div class="cp">U+FB62</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭣ</span></div><div class="cp">U+FB63</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭤ</span></div><div class="cp">U+FB64</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭥ</span></div><div class="cp">U+FB65</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭦ</span></div><div class="cp">U+FB66</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭧ</span></div><div class="cp">U+FB67</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭨ</span></div><div class="cp">U+FB68</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭩ</span></div><div class="cp">U+FB69</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭪ</span></div><div class="cp">U+FB6A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭫ</span></div><div class="cp">U+FB6B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭬ</span></div><div class="cp">U+FB6C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭭ</span></div><div class="cp">U+FB6D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭮ</span></div><div class="cp">U+FB6E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭯ</span></div><div class="cp">U+FB6F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭰ</span></div><div class="cp">U+FB70</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭱ</span></div><div class="cp">U+FB71</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭲ</span></div><div class="cp">U+FB72</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭳ</span></div><div class="cp">U+FB73</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭴ</span></div><div class="cp">U+FB74</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭵ</span></div><div class="cp">U+FB75</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭶ</span></div><div class="cp">U+FB76</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭷ</span></div><div class="cp">U+FB77</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭸ</span></div><div class="cp">U+FB78</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭹ</span></div><div class="cp">U+FB79</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭺ</span></div><div class="cp">U+FB7A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭻ</span></div><div class="cp">U+FB7B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭼ</span></div><div class="cp">U+FB7C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭽ</span></div><div class="cp">U+FB7D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭾ</span></div><div class="cp">U+FB7E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﭿ</span></div><div class="cp">U+FB7F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮀ</span></div><div class="cp">U+FB80</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮁ</span></div><div class="cp">U+FB81</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮂ</span></div><div class="cp">U+FB82</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮃ</span></div><div class="cp">U+FB83</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮄ</span></div><div class="cp">U+FB84</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮅ</span></div><div class="cp">U+FB85</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮆ</span></div><div class="cp">U+FB86</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮇ</span></div><div class="cp">U+FB87</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮈ</span></div><div class="cp">U+FB88</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮉ</span></div><div class="cp">U+FB89</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮊ</span></div><div class="cp">U+FB8A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮋ</span></div><div class="cp">U+FB8B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮌ</span></div><div class="cp">U+FB8C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮍ</span></div><div class="cp">U+FB8D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮎ</span></div><div class="cp">U+FB8E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮏ</span></div><div class="cp">U+FB8F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮐ</span></div><div class="cp">U+FB90</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮑ</span></div><div class="cp">U+FB91</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮒ</span></div><div class="cp">U+FB92</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮓ</span></div><div class="cp">U+FB93</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮔ</span></div><div class="cp">U+FB94</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮕ</span></div><div class="cp">U+FB95</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮖ</span></div><div class="cp">U+FB96</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮗ</span></div><div class="cp">U+FB97</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮘ</span></div><div class="cp">U+FB98</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮙ</span></div><div class="cp">U+FB99</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮚ</span></div><div class="cp">U+FB9A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮛ</span></div><div class="cp">U+FB9B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮜ</span></div><div class="cp">U+FB9C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮝ</span></div><div class="cp">U+FB9D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮞ</span></div><div class="cp">U+FB9E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮟ</span></div><div class="cp">U+FB9F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮠ</span></div><div class="cp">U+FBA0</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮡ</span></div><div class="cp">U+FBA1</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮢ</span></div><div class="cp">U+FBA2</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮣ</span></div><div class="cp">U+FBA3</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮤ</span></div><div class="cp">U+FBA4</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮥ</span></div><div class="cp">U+FBA5</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮦ</span></div><div class="cp">U+FBA6</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮧ</span></div><div class="cp">U+FBA7</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮨ</span></div><div class="cp">U+FBA8</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮩ</span></div><div class="cp">U+FBA9</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮪ</span></div><div class="cp">U+FBAA</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮫ</span></div><div class="cp">U+FBAB</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮬ</span></div><div class="cp">U+FBAC</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮭ</span></div><div class="cp">U+FBAD</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮮ</span></div><div class="cp">U+FBAE</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮯ</span></div><div class="cp">U+FBAF</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮰ</span></div><div class="cp">U+FBB0</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﮱ</span></div><div class="cp">U+FBB1</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯓ</span></div><div class="cp">U+FBD3</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯔ</span></div><div class="cp">U+FBD4</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯕ</span></div><div class="cp">U+FBD5</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯖ</span></div><div class="cp">U+FBD6</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯗ</span></div><div class="cp">U+FBD7</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯘ</span></div><div class="cp">U+FBD8</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯙ</span></div><div class="cp">U+FBD9</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯚ</span></div><div class="cp">U+FBDA</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯛ</span></div><div class="cp">U+FBDB</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯜ</span></div><div class="cp">U+FBDC</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯝ</span></div><div class="cp">U+FBDD</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯞ</span></div><div class="cp">U+FBDE</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯟ</span></div><div class="cp">U+FBDF</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯠ</span></div><div class="cp">U+FBE0</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯡ</span></div><div class="cp">U+FBE1</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯢ</span></div><div class="cp">U+FBE2</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯣ</span></div><div class="cp">U+FBE3</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯤ</span></div><div class="cp">U+FBE4</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯥ</span></div><div class="cp">U+FBE5</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯦ</span></div><div class="cp">U+FBE6</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯧ</span></div><div class="cp">U+FBE7</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯨ</span></div><div class="cp">U+FBE8</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯩ</span></div><div class="cp">U+FBE9</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯪ</span></div><div class="cp">U+FBEA</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯫ</span></div><div class="cp">U+FBEB</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯬ</span></div><div class="cp">U+FBEC</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯭ</span></div><div class="cp">U+FBED</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯮ</span></div><div class="cp">U+FBEE</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯯ</span></div><div class="cp">U+FBEF</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯰ</span></div><div class="cp">U+FBF0</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯱ</span></div><div class="cp">U+FBF1</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯲ</span></div><div class="cp">U+FBF2</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯳ</span></div><div class="cp">U+FBF3</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯴ</span></div><div class="cp">U+FBF4</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯵ</span></div><div class="cp">U+FBF5</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯶ</span></div><div class="cp">U+FBF6</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯷ</span></div><div class="cp">U+FBF7</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯸ</span></div><div class="cp">U+FBF8</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯹ</span></div><div class="cp">U+FBF9</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯺ</span></div><div class="cp">U+FBFA</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯻ</span></div><div class="cp">U+FBFB</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯼ</span></div><div class="cp">U+FBFC</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯽ</span></div><div class="cp">U+FBFD</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯾ</span></div><div class="cp">U+FBFE</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﯿ</span></div><div class="cp">U+FBFF</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰀ</span></div><div class="cp">U+FC00</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰁ</span></div><div class="cp">U+FC01</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰂ</span></div><div class="cp">U+FC02</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰃ</span></div><div class="cp">U+FC03</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰄ</span></div><div class="cp">U+FC04</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰅ</span></div><div class="cp">U+FC05</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰆ</span></div><div class="cp">U+FC06</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰇ</span></div><div class="cp">U+FC07</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰈ</span></div><div class="cp">U+FC08</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰉ</span></div><div class="cp">U+FC09</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰊ</span></div><div class="cp">U+FC0A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰋ</span></div><div class="cp">U+FC0B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰌ</span></div><div class="cp">U+FC0C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰍ</span></div><div class="cp">U+FC0D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰎ</span></div><div class="cp">U+FC0E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰏ</span></div><div class="cp">U+FC0F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰐ</span></div><div class="cp">U+FC10</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰑ</span></div><div class="cp">U+FC11</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰒ</span></div><div class="cp">U+FC12</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰓ</span></div><div class="cp">U+FC13</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰔ</span></div><div class="cp">U+FC14</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰕ</span></div><div class="cp">U+FC15</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰖ</span></div><div class="cp">U+FC16</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰗ</span></div><div class="cp">U+FC17</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰘ</span></div><div class="cp">U+FC18</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰙ</span></div><div class="cp">U+FC19</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰚ</span></div><div class="cp">U+FC1A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰛ</span></div><div class="cp">U+FC1B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰜ</span></div><div class="cp">U+FC1C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰝ</span></div><div class="cp">U+FC1D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰞ</span></div><div class="cp">U+FC1E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰟ</span></div><div class="cp">U+FC1F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰠ</span></div><div class="cp">U+FC20</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰡ</span></div><div class="cp">U+FC21</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰢ</span></div><div class="cp">U+FC22</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰣ</span></div><div class="cp">U+FC23</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰤ</span></div><div class="cp">U+FC24</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰥ</span></div><div class="cp">U+FC25</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰦ</span></div><div class="cp">U+FC26</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰧ</span></div><div class="cp">U+FC27</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰨ</span></div><div class="cp">U+FC28</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰩ</span></div><div class="cp">U+FC29</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰪ</span></div><div class="cp">U+FC2A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰫ</span></div><div class="cp">U+FC2B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰬ</span></div><div class="cp">U+FC2C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰭ</span></div><div class="cp">U+FC2D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰮ</span></div><div class="cp">U+FC2E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰯ</span></div><div class="cp">U+FC2F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰰ</span></div><div class="cp">U+FC30</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰱ</span></div><div class="cp">U+FC31</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰲ</span></div><div class="cp">U+FC32</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰳ</span></div><div class="cp">U+FC33</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰴ</span></div><div class="cp">U+FC34</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰵ</span></div><div class="cp">U+FC35</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰶ</span></div><div class="cp">U+FC36</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰷ</span></div><div class="cp">U+FC37</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰸ</span></div><div class="cp">U+FC38</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰹ</span></div><div class="cp">U+FC39</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰺ</span></div><div class="cp">U+FC3A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰻ</span></div><div class="cp">U+FC3B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰼ</span></div><div class="cp">U+FC3C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰽ</span></div><div class="cp">U+FC3D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰾ</span></div><div class="cp">U+FC3E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﰿ</span></div><div class="cp">U+FC3F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱀ</span></div><div class="cp">U+FC40</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱁ</span></div><div class="cp">U+FC41</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱂ</span></div><div class="cp">U+FC42</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱃ</span></div><div class="cp">U+FC43</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱄ</span></div><div class="cp">U+FC44</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱅ</span></div><div class="cp">U+FC45</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱆ</span></div><div class="cp">U+FC46</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱇ</span></div><div class="cp">U+FC47</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱈ</span></div><div class="cp">U+FC48</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱉ</span></div><div class="cp">U+FC49</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱊ</span></div><div class="cp">U+FC4A</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱋ</span></div><div class="cp">U+FC4B</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱌ</span></div><div class="cp">U+FC4C</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱍ</span></div><div class="cp">U+FC4D</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱎ</span></div><div class="cp">U+FC4E</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱏ</span></div><div class="cp">U+FC4F</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱐ</span></div><div class="cp">U+FC50</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱑ</span></div><div class="cp">U+FC51</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱒ</span></div><div class="cp">U+FC52</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱓ</span></div><div class="cp">U+FC53</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱔ</span></div><div class="cp">U+FC54</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱕ</span></div><div class="cp">U+FC55</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱖ</span></div><div class="cp">U+FC56</div></div><div class="glyph"><div class="g" style="font-family:'QPC Basmalah';font-size:1.8rem"><span>ﱗ</span></div><div class="cp">U+FC57</div></div></div>
   </div>
 </section>
 
 <footer>
-  <p>License for the fonts: <a href="http://dm.qurancomplex.gov.sa/copyright-2/">KFGQPC</a>. See <a href="https://github.com/nuqayah/qpc-fonts/blob/master/LICENSE">LICENSE</a> for repo terms.</p>
+  <p>Text above is Surah al-Baqarah (2:255), extracted verbatim from each riwaya's JSON in this repo. Orthography differs by design.</p>
+  <p>Fonts © KFGQPC — <a href="http://dm.qurancomplex.gov.sa/copyright-2/">license</a>. See <a href="https://github.com/nuqayah/qpc-fonts/blob/master/LICENSE">LICENSE</a>.</p>
 </footer>
+
+<script>
+const VARIANTS = {"hafs": [{"label": "Uthmanic Hafs v22 (text)", "kind": "text", "fontFamily": "Uthmanic Hafs v22", "text": "ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةٞ وَلَا نَوۡمٞۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءٖ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ"}, {"label": "Uthman Hafs Ver09 (text)", "kind": "text", "fontFamily": "Uthman Hafs", "text": "ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةٞ وَلَا نَوۡمٞۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءٖ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ"}, {"label": "UthmanicHafs1 Ver13 (text)", "kind": "text", "fontFamily": "Uthmanic Hafs1 v13", "text": "ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةٞ وَلَا نَوۡمٞۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءٖ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ"}, {"label": "UthmanicHafs1 Ver13 (bold)", "kind": "text", "fontFamily": "Uthmanic Hafs1 v13 Bold", "text": "ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةٞ وَلَا نَوۡمٞۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءٖ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ"}, {"label": "UthmanicHafs v2-1 (text)", "kind": "text", "fontFamily": "Uthmanic Hafs v2-1", "text": "ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةٞ وَلَا نَوۡمٞۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءٖ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ"}, {"label": "UthmanicHafs V20 (text)", "kind": "text", "fontFamily": "Uthmanic Hafs V20", "text": "ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةٞ وَلَا نَوۡمٞۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءٖ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ"}, {"label": "Hafs Nastaleeq Ver10 (text)", "kind": "text", "fontFamily": "Hafs Nastaleeq", "text": "اَللّٰهُ لَا٘ اِلٰهَ اِلَّا هُوَ اَلْحَيُّ الْقَيُّوْمُ لَا تَاْخُذُهٗ سِنَةٌ وَّلَا نَوْمٌ لَهٗ مَا فِي السَّمٰوٰتِ وَمَا فِي الْاَرْضِ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهٗ٘ اِلَّا بِاِذْنِهٖ يَعْلَمُ مَا بَيْنَ اَيْدِيْهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيْطُوْنَ بِشَيْءٍ مِّنْ عِلْمِهٖ٘ اِلَّا بِمَا شَآءَ وَسِعَ كُرْسِيُّهُ السَّمٰوٰتِ وَالْاَرْضَ وَلَا يَـُٔوْدُهٗ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيْمُ"}, {"label": "QPC v1 (glyphs)", "kind": "glyph", "fontFamily": "Mushaf v1 P042", "text": "ﮣﮤﮥﮦﮧﮨﮩﮪﮫﮬﮭﮮﮯﮰﮱﯓﯔﯕﯖﯗﯘﯙﯚﯛﯜﯝﯞﯟﯠﯡﯢﯣﯤﯥﯦﯧﯨﯩﯪﯫﯬﯭﯮﯯﯰﯱﯲﯳﯴﯵﯶﯷﯸﯹﯺﯻﯼﯽﯾ"}, {"label": "QPC v1.5 (glyphs)", "kind": "glyph", "fontFamily": "Mushaf v1.5 P042", "text": "ﮣﮤﮥﮦﮧﮨﮩﮪﮫﮬﮭﮮﮯﮰﮱﯓﯔﯕﯖﯗﯘﯙﯚﯛﯜﯝﯞﯟﯠﯡﯢﯣﯤﯥﯦﯧﯨﯩﯪﯫﯬﯭﯮﯯﯰﯱﯲﯳﯴﯵﯶﯷﯸﯹﯺﯻﯼﯽﯾ"}, {"label": "QPC v2 (glyphs)", "kind": "glyph", "fontFamily": "Mushaf v2 P042", "text": "ﲓﲔﲕﲖﲗﲘﲙﲚﲛﲜﲝﲞﲟﲠﲡﲢﲣﲤﲥﲦﲧﲨﲩﲪﲫﲬﲭﲮﲯﲰﲱﲲﲳﲴﲵﲶﲷﲸﲹﲺﲻﲼﲽﲾﲿﳀﳁﳂﳃﳄﳅﳆﳇﳈﳉﳊﳋﳌﳍ"}, {"label": "QPC v4 (glyphs)", "kind": "glyph", "fontFamily": "Mushaf v4 Hafs", "text": ""}], "warsh": [{"label": "Uthmanic Warsh V21 (text)", "kind": "text", "fontFamily": "Uthmanic Warsh", "text": "اَ۬للَّهُ لَآ إِلَٰهَ إِلَّا هُوَۖ اَ۬لْحَيُّ اُ۬لْقَيُّومُۖ لَا تَاخُذُهُۥ سِنَةٞ وَلَا نَوْمٞۖ لَّهُۥ مَا فِے اِ۬لسَّمَٰوَٰتِ وَمَا فِے اِ۬لَارْضِۖ مَن ذَا اَ۬لذِے يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦۖ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْۖ وَلَا يُحِيطُونَ بِشَےْءٖ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَۖ وَسِعَ كُرْسِيُّهُ اُ۬لسَّمَٰوَٰتِ وَالَارْضَۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَاۖ وَهُوَ اَ۬لْعَلِيُّ اُ۬لْعَظِيمُۖ"}, {"label": "QPC v4 (glyphs)", "kind": "glyph", "fontFamily": "Mushaf v4 Warsh", "text": ""}], "qaloun": [{"label": "Uthmanic Qaloun V21 (text)", "kind": "text", "fontFamily": "Uthmanic Qaloun", "text": "اَ۬للَّهُ لَا إِلَٰهَ إِلَّا هُوَۖ اَ۬لْحَيُّ اُ۬لْقَيُّومُۖ لَا تَأْخُذُهُۥ سِنَةٞ وَلَا نَوْمٞۖ لَّهُۥ مَا فِے اِ۬لسَّمَٰوَٰتِ وَمَا فِے اِ۬لْأَرْضِۖ مَن ذَا اَ۬لذِے يَشْفَعُ عِندَهُۥ إِلَّا بِإِذْنِهِۦۖ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْۖ وَلَا يُحِيطُونَ بِشَےْءٖ مِّنْ عِلْمِهِۦ إِلَّا بِمَا شَآءَۖ وَسِعَ كُرْسِيُّهُ اُ۬لسَّمَٰوَٰتِ وَالْأَرْضَۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَاۖ وَهْوَ اَ۬لْعَلِيُّ اُ۬لْعَظِيمُۖ"}], "bazzi": [{"label": "Uthmanic Bazzi V20 (text)", "kind": "text", "fontFamily": "Uthmanic Bazzi", "text": "ٱللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُ لَا تَأۡخُذُهُۥ سِنَةٞ وَلَا نَوۡمٞۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمُۥ وَمَا خَلۡفَهُمُۥۖ وَلَا يُحِيطُونَ بِشَيۡءٖ مِّنۡ عِلۡمِهِۦ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ"}], "douri": [{"label": "Uthmanic Douri V20 (text)", "kind": "text", "fontFamily": "Uthmanic Douri", "text": "اَ۬للَّهُ لَآ إِلَٰهَ إِلَّا هُوَ اَ۬لۡحَيُّ اُ۬لۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةٞ وَلَا نَوۡمٞۚ لَّهُۥ مَا فِي اِ۬لسَّمَٰوَٰتِ وَمَا فِي اِ۬لۡأَرۡضِۗ مَن ذَا اَ۬لَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءٖ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ اُ۬لسَّمَٰوَٰتِ وَاَلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهۡوَ اَ۬لۡعَلِيُّ اُ۬لۡعَظِيمُ"}], "qunbul": [{"label": "Uthmanic Qunbul V20 (text)", "kind": "text", "fontFamily": "Uthmanic Qunbul", "text": "ٱللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُ لَا تَأۡخُذُهُۥ سِنَةٞ وَلَا نَوۡمٞۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمُۥ وَمَا خَلۡفَهُمُۥۖ وَلَا يُحِيطُونَ بِشَيۡءٖ مِّنۡ عِلۡمِهِۦ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ"}], "shuba": [{"label": "Uthmanic Shuba V20 (text)", "kind": "text", "fontFamily": "Uthmanic Shuba", "text": "ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةٞ وَلَا نَوۡمٞۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءٖ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ"}], "sousi": [{"label": "Uthmanic Sousi V20 (text)", "kind": "text", "fontFamily": "Uthmanic Sousi", "text": "اَ۬للَّهُ لَا إِلَٰهَ إِلَّا هُوَ اَ۬لۡحَيُّ اُ۬لۡقَيُّومُۚ لَا تَاخُذُهُۥ سِنَةٞ وَلَا نَوۡمٞۚ لَّهُۥ مَا فِي اِ۬لسَّمَٰوَٰتِ وَمَا فِي اِ۬لۡأَرۡضِۗ مَن ذَا اَ۬لَّذِي يَشۡفَع عِّندَهُۥ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَم مَّا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءٖ مِّنۡ عِلۡمِهِۦ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ اُ۬لسَّمَٰوَٰتِ وَاَلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهۡوَ اَ۬لۡعَلِيُّ اُ۬لۡعَظِيمُ"}]};
+function renderVariant(rid) {
+  const sel = document.getElementById('select-'+rid);
+  const v = VARIANTS[rid][sel.value];
+  document.getElementById('family-'+rid).textContent = v.label;
+  const sample = document.getElementById('sample-'+rid);
+  const note = document.getElementById('note-'+rid);
+  if (v.kind === 'note') {
+    sample.style.display = 'none';
+    note.style.display = 'block';
+    note.textContent = v.text;
+  } else {
+    sample.style.display = '';
+    note.style.display = 'none';
+    sample.style.fontFamily = "'" + v.fontFamily + "'";
+    sample.classList.toggle('sample-glyph', v.kind === 'glyph');
+    sample.textContent = v.text;
+  }
+}
+Object.entries(VARIANTS).forEach(([rid, arr]) => {
+  const sel = document.getElementById('select-'+rid);
+  if (!sel) return;
+  sel.innerHTML = arr.map((v, i) => '<option value="'+i+'">'+v.label.replace(/</g,'&lt;')+'</option>').join('');
+  sel.addEventListener('change', () => renderVariant(rid));
+  if (arr.length < 2) sel.closest('.variant-row').style.display = 'none';
+  renderVariant(rid);
+});
+
+// Auto-shrink wide glyphs inside fixed-size inventory cells so they don't
+// overflow their borders. Runs once after fonts settle, plus on resize.
+function fitGlyphs() {
+  document.querySelectorAll('.glyph .g').forEach(box => {
+    const span = box.firstElementChild;
+    if (!span) return;
+    span.style.transform = '';                   // reset before measuring
+    const natural = span.getBoundingClientRect().width;
+    const avail = box.clientWidth;
+    if (natural > avail && natural > 0) {
+      const scale = Math.max(0.35, avail / natural);
+      span.style.transform = 'scale(' + scale.toFixed(3) + ')';
+    }
+  });
+}
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(fitGlyphs);
+} else {
+  window.addEventListener('load', fitGlyphs);
+}
+window.addEventListener('resize', () => { clearTimeout(window._fitT); window._fitT = setTimeout(fitGlyphs, 120); });
+</script>
 
 </body>
 </html>

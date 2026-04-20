@@ -2,75 +2,68 @@
 ### King Fahd Qur'an Printing Complex Fonts
 
 **Live preview:** <https://nuqayah.github.io/qpc-fonts/>
+**@font-face recipes:** <https://nuqayah.github.io/qpc-fonts/demo.html>
 
-Fonts and text sources from the KFGQPC, grouped by riwaya. Original font files can also be retrieved from:
- - `http://qurancomplex.gov.sa/TTF/` + filename
- - or the [Windows installer](http://qurancomplex.gov.sa/Downloads/Fonts/AllPartsFonts.zip)
- - _Other_ fonts: <http://fonts.qurancomplex.gov.sa>
+Fonts and text sources from the KFGQPC, grouped by riwaya. Original files can also be retrieved from:
+- `http://qurancomplex.gov.sa/TTF/` + filename
+- [Windows installer](http://qurancomplex.gov.sa/Downloads/Fonts/AllPartsFonts.zip)
+- _Other_ fonts: <http://fonts.qurancomplex.gov.sa>
 
 #### Repository layout
 
 ```
 <riwaya>/               text sources + non-page-glyph assets per riwaya
-<riwaya>-glyphs/vX/     page-based mushaf fonts (one glyph = one word/page)
-  ├── fonts/            .ttf, .woff, .woff2 (flat, all formats mixed)
-  └── data/mushaf.txt   glyph → word map for this version
+  ├── fonts/            regular Arabic text fonts (Unicode)
+  └── text/             text-mushaf sources (docx/json/ttf) for that riwaya
 
-other-fonts/fonts/      cross-riwaya / non-mushaf fonts
+<riwaya>-glyphs/vX/     page-based glyph fonts (one glyph = one word/page)
+  ├── fonts/            page fonts — must be paired with the data file
+  └── data/             glyph→word mapping for this version
+
+other-fonts/fonts/      general Arabic text fonts (Uthman Naskh) + QPC Symbols
+                        — not Qur'an-specific and not tied to any riwaya
 scripts/                prep_qpc_mushaf.py, build_web_formats.sh
 docs/                   GitHub Pages preview site
 ```
 
-Riwayat present today: `hafs/`, `warsh/`, `qaloun/`, `bazzi/`, `douri/`, `qunbul/`, `shuba/`, `sousi/`.
-Page-glyph fonts present today: `hafs-glyphs/v1`, `hafs-glyphs/v1.5`, `hafs-glyphs/v2`, `hafs-glyphs/v4`, `warsh-glyphs/v4`.
+Riwayat present: `hafs/`, `warsh/`, `qaloun/`, `bazzi/`, `douri/`, `qunbul/`, `shuba/`, `sousi/`.
+Page-glyph versions: `hafs-glyphs/v1`, `v1.5`, `v2`, `v4`; `warsh-glyphs/v4`.
 
-#### Usage
+#### Fonts have two different architectures
 
-##### Other fonts (regular Unicode Arabic text)
+1. **Text fonts** (everything under `<riwaya>/text/`, `<riwaya>/fonts/`, and `other-fonts/fonts/`) render normal Unicode Arabic text. Just declare `@font-face` and use them like any other font.
+
+2. **Page-glyph fonts** (everything under `<riwaya>-glyphs/`) do **not** render Unicode text. Each glyph is a pre-shaped word pinned to a specific mushaf page. You must pair each font with its data file to know which codepoints to emit.
+
+#### Font ↔ data pairing (page-glyph fonts)
+
+| Version | Fonts in repo | Page → font | Data file | Format |
+|---|---|---|---|---|
+| `hafs-glyphs/v1/` | 604 per-page + `QCF_BSML` | `QCF_P{page:03d}` | `v1/data/mushaf.txt` | `page,glyphs` lines |
+| `hafs-glyphs/v1.5/` | 604 per-page | `page_{page}` | `v1.5/data/mushaf.txt` (copy of v1; same codepoint scheme) | same |
+| `hafs-glyphs/v2/` | 100 per-page | `QCF2{page:03d}` (pages 1–100 only in this repo) | `v2/data/mushaf.txt` | same |
+| `hafs-glyphs/v4/` | 47 per-range | per-word `p` field | `v4/data/quran.json` | `[s][v][{p,c}]` |
+| `warsh-glyphs/v4/` | 51 per-range | per-word `p` field | `v4/data/quran.json` | same |
+
+See [`hafs-glyphs/README.md`](hafs-glyphs/README.md) and [`warsh-glyphs/README.md`](warsh-glyphs/README.md) for full rendering examples including browser-specific bidi handling (page-glyph text requires `unicode-bidi: bidi-override`).
+
+#### Quick usage
+
+Copy-paste `@font-face` snippets for every font are on the [recipes page](https://nuqayah.github.io/qpc-fonts/demo.html). One example:
+
 ```css
 @font-face {
   font-family: 'Uthman Naskh';
   src: local('KFGQPC Uthman Taha Naskh'),
-       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/other-fonts/fonts/UthmanTN1%20Ver10.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Uthman Naskh';
-  font-weight: bold;
-  src: local('KFGQPC Uthman Taha Naskh Bold'), local('KFGQPCUthmanTahaNaskh-Bold'),
-       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/other-fonts/fonts/UthmanTN1B%20Ver10.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Uthman Hafs';
-  src: local('KFGQPC Uthmanic Script HAFS'),
-       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/other-fonts/fonts/UthmanicHafs1%20Ver09.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'QPC Symbols';
-  src: local('KFGQPC Arabic Symbols 01'),
-       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/other-fonts/fonts/Symbols1_Ver02.woff2') format('woff2');
+       url('other-fonts/fonts/UthmanTN1%20Ver10.woff2') format('woff2');
 }
 ```
 
-##### Page-glyph (mushaf) fonts
-```css
-@font-face {
-  font-family: 'Mushaf Ligatures';
-  src: local('QCF_BSML'),
-       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/hafs-glyphs/v1/fonts/QCF_BSML.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Mushaf Page NNN';
-  src: local('QCF_PNNN'),
-       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/hafs-glyphs/v1/fonts/QCF_PNNN.woff2') format('woff2');
-}
-```
-Replace `NNN` with the actual page number (`001`–`604`). Each page font uses one glyph per word — see `hafs-glyphs/v1/data/mushaf.txt` (and `hafs-glyphs/v2/data/mushaf.txt` for v2).
-
-> Pin these URLs to a commit SHA or a release tag for production — `master` is not immutable.
+> Paths are relative to this repo's root — adjust the `url(...)` prefix to wherever you host the fonts in your own project.
 
 #### Building web formats
 
-`scripts/build_web_formats.sh` walks every `fonts/` directory and generates missing `.woff` / `.woff2` from the `.ttf` / `.otf` sources. Requires `woff2_compress` (`brew install woff2`) and optionally `sfnt2woff-zopfli` (`brew install sfnt2woff-zopfli`).
+`scripts/build_web_formats.sh` walks every `fonts/` directory and generates missing `.woff`/`.woff2` from the `.ttf`/`.otf` sources. Requires `woff2_compress` (`brew install woff2`) and optionally `sfnt2woff-zopfli`.
 
 ```sh
 bash scripts/build_web_formats.sh
@@ -78,14 +71,17 @@ bash scripts/build_web_formats.sh
 
 #### Preparing text sources
 
-`scripts/prep_qpc_mushaf.py` normalizes raw text-mushaf output (e.g. pandoc conversion of the KFGQPC docx sources) into one-ayah-per-line form.
+`scripts/prep_qpc_mushaf.py` normalizes raw text-mushaf output (e.g. pandoc conversion of KFGQPC docx sources) into one-ayah-per-line form.
 
 ```sh
 pip install -r scripts/requirements.txt
 python scripts/prep_qpc_mushaf.py qaloon qaloun/text/UthmanicQaloun_V21/<file>.txt
 ```
 
+#### Cross-qiraa ayah numbering
+
+Different riwayat use different ayah-counting systems (Hafs has 286 ayahs in al-Baqarah, Warsh 285, etc.). For authoritative cross-qiraa mappings, see [quranpedia/qiraat-ayah-map](https://github.com/quranpedia/qiraat-ayah-map).
+
 #### License
 
-Fonts © KFGQPC — [license](http://dm.qurancomplex.gov.sa/copyright-2/).
-Tooling in this repo is MIT — see [LICENSE](LICENSE).
+Fonts © KFGQPC — [license](http://dm.qurancomplex.gov.sa/copyright-2/). Repo tooling is MIT — see [LICENSE](LICENSE).
