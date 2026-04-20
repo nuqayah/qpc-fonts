@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QPC Fonts — Preview</title>
+<link rel="stylesheet" href="assets/preview.css">
+<style>
+/* ==== Non-mushaf fonts ==== */
+@font-face {
+  font-family: 'Uthman Naskh';
+  src: local('KFGQPC Uthman Taha Naskh'),
+       url('../other-fonts/fonts/UthmanTN1%20Ver10.woff2') format('woff2'),
+       url('../other-fonts/fonts/UthmanTN1%20Ver10.woff')  format('woff');
+}
+@font-face {
+  font-family: 'Uthman Naskh';
+  font-weight: bold;
+  src: local('KFGQPC Uthman Taha Naskh Bold'), local('KFGQPCUthmanTahaNaskh-Bold'),
+       url('../other-fonts/fonts/UthmanTN1B%20Ver10.woff2') format('woff2'),
+       url('../other-fonts/fonts/UthmanTN1B%20Ver10.woff')  format('woff');
+}
+@font-face {
+  font-family: 'Uthman Hafs';
+  src: local('KFGQPC Uthmanic Script HAFS'),
+       url('../other-fonts/fonts/UthmanicHafs1%20Ver09.woff2') format('woff2'),
+       url('../other-fonts/fonts/UthmanicHafs1%20Ver09.woff')  format('woff');
+}
+@font-face {
+  font-family: 'QPC Symbols';
+  src: local('KFGQPC Arabic Symbols 01'),
+       url('../other-fonts/fonts/Symbols1_Ver02.woff2') format('woff2');
+}
+
+/* ==== Hafs page-glyph families (one glyph = one word; see each version's data/mushaf.txt) ==== */
+@font-face {
+  font-family: 'Mushaf v1 Basmalah';
+  src: local('QCF_BSML'),
+       url('../hafs-glyphs/v1/fonts/QCF_BSML.woff2') format('woff2'),
+       url('../hafs-glyphs/v1/fonts/QCF_BSML.woff')  format('woff');
+}
+@font-face {
+  font-family: 'Mushaf v1 Page 1';
+  src: local('QCF_P001'),
+       url('../hafs-glyphs/v1/fonts/QCF_P001.woff2') format('woff2'),
+       url('../hafs-glyphs/v1/fonts/QCF_P001.woff')  format('woff');
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>QPC Fonts <span class="ar">خطوط المجمع</span></h1>
+  <p>Fonts from the King Fahd Glorious Qur'an Printing Complex, grouped by riwaya.
+     Source repo: <a href="https://github.com/nuqayah/qpc-fonts">nuqayah/qpc-fonts</a>.</p>
+  <nav>
+    <a href="#hafs">Hafs</a>
+    <a href="#warsh">Warsh</a>
+    <a href="#qaloun">Qaloun</a>
+    <a href="#bazzi">Bazzi</a>
+    <a href="#douri">Douri</a>
+    <a href="#qunbul">Qunbul</a>
+    <a href="#shuba">Shuba</a>
+    <a href="#sousi">Sousi</a>
+    <a href="#other">Other fonts</a>
+    <a href="demo.html">@font-face recipe →</a>
+  </nav>
+</header>
+
+<section class="riwaya" id="hafs">
+  <h2>Hafs <span class="count">page-glyph versions: v1, v1.5, v2, v4 · text sources: 5</span></h2>
+
+  <h3>Page-glyph fonts</h3>
+  <p style="color:var(--muted);font-size:.9rem;margin:0 0 .5rem">
+    These fonts render one word per glyph, pinned to a specific mushaf page.
+    They require the matching <code>data/mushaf.txt</code> to produce readable text.
+    The samples below show <em>QCF_BSML</em> (basmalah) and page 1 of v1 as a visual check only.
+  </p>
+
+  <div class="card">
+    <div class="meta">
+      <span class="family">Mushaf v1 · Basmalah</span>
+      <span class="path">hafs-glyphs/v1/fonts/QCF_BSML.*</span>
+    </div>
+    <div class="sample sample-large" style="font-family:'Mushaf v1 Basmalah'">ﱁﱂﱃﱄ</div>
+  </div>
+
+  <div class="card">
+    <div class="meta">
+      <span class="family">Mushaf v1 · Page 1</span>
+      <span class="path">hafs-glyphs/v1/fonts/QCF_P001.*</span>
+    </div>
+    <div class="sample sample-large" style="font-family:'Mushaf v1 Page 1'">ﭑﭒﭓﭔ</div>
+    <details>
+      <summary>@font-face</summary>
+<pre>@font-face {
+  font-family: 'Mushaf Page NNN';
+  src: local('QCF_PNNN'),
+       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/hafs-glyphs/v1/fonts/QCF_PNNN.woff2') format('woff2');
+}</pre>
+    </details>
+  </div>
+
+  <h3>Text sources</h3>
+  <p style="color:var(--muted);font-size:.9rem">
+    Source text (docx/txt/json) for Hafs — not renderable here; see
+    <a href="https://github.com/nuqayah/qpc-fonts/tree/master/hafs/text">hafs/text/</a>:
+    <code>UthmanicHafs_V22</code>, <code>UthmanicHafs1_Ver13</code>, <code>UthmanicHafs_v2-1</code>,
+    <code>UthmanicHafs_v20_-font</code>, <code>HafsNastaleeq&nbsp;Ver10</code>.
+  </p>
+</section>
+
+<section class="riwaya" id="warsh">
+  <h2>Warsh <span class="count">page-glyph versions: v4 · text source: UthmanicWarsh_V21</span></h2>
+  <p style="color:var(--muted);font-size:.9rem">
+    Page-glyph v4 at <a href="https://github.com/nuqayah/qpc-fonts/tree/master/warsh-glyphs/v4/fonts">warsh-glyphs/v4/fonts</a>.
+    Text source at <a href="https://github.com/nuqayah/qpc-fonts/tree/master/warsh/text">warsh/text/UthmanicWarsh_V21</a>.
+  </p>
+</section>
+
+<section class="riwaya" id="qaloun">
+  <h2>Qaloun <span class="count">text source: UthmanicQaloun_V21</span></h2>
+  <p style="color:var(--muted);font-size:.9rem">
+    Text-only (no page-glyph fonts in the repo). See
+    <a href="https://github.com/nuqayah/qpc-fonts/tree/master/qaloun/text">qaloun/text/</a>.
+  </p>
+</section>
+
+<section class="riwaya" id="bazzi">
+  <h2>Bazzi <span class="count">text source: UthmanicBazzi_V20</span></h2>
+  <p style="color:var(--muted);font-size:.9rem">
+    Text-only. See <a href="https://github.com/nuqayah/qpc-fonts/tree/master/bazzi/text">bazzi/text/</a>.
+  </p>
+</section>
+
+<section class="riwaya" id="douri">
+  <h2>Douri <span class="count">text source: UthmanicDouri_V20</span></h2>
+  <p style="color:var(--muted);font-size:.9rem">
+    Text-only. See <a href="https://github.com/nuqayah/qpc-fonts/tree/master/douri/text">douri/text/</a>.
+  </p>
+</section>
+
+<section class="riwaya" id="qunbul">
+  <h2>Qunbul <span class="count">text source: UthmanicQunbul_V20</span></h2>
+  <p style="color:var(--muted);font-size:.9rem">
+    Text-only. See <a href="https://github.com/nuqayah/qpc-fonts/tree/master/qunbul/text">qunbul/text/</a>.
+  </p>
+</section>
+
+<section class="riwaya" id="shuba">
+  <h2>Shuba <span class="count">text source: UthmanicShuba_V20</span></h2>
+  <p style="color:var(--muted);font-size:.9rem">
+    Text-only. See <a href="https://github.com/nuqayah/qpc-fonts/tree/master/shuba/text">shuba/text/</a>.
+  </p>
+</section>
+
+<section class="riwaya" id="sousi">
+  <h2>Sousi <span class="count">text source: UthmanicSousi_V20</span></h2>
+  <p style="color:var(--muted);font-size:.9rem">
+    Text-only. See <a href="https://github.com/nuqayah/qpc-fonts/tree/master/sousi/text">sousi/text/</a>.
+  </p>
+</section>
+
+<section class="riwaya" id="other">
+  <h2>Other fonts <span class="count">cross-riwaya / non-mushaf · other-fonts/fonts/</span></h2>
+
+  <div class="card">
+    <div class="meta">
+      <span class="family">Uthman Naskh</span>
+      <span class="path">UthmanTN1 Ver10.*</span>
+    </div>
+    <div class="sample" style="font-family:'Uthman Naskh'">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+    <div class="sample" style="font-family:'Uthman Naskh'">ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ</div>
+  </div>
+
+  <div class="card">
+    <div class="meta">
+      <span class="family">Uthman Naskh (Bold)</span>
+      <span class="path">UthmanTN1B Ver10.*</span>
+    </div>
+    <div class="sample" style="font-family:'Uthman Naskh';font-weight:bold">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+  </div>
+
+  <div class="card">
+    <div class="meta">
+      <span class="family">Uthman Hafs</span>
+      <span class="path">UthmanicHafs1 Ver09.*</span>
+    </div>
+    <div class="sample" style="font-family:'Uthman Hafs'">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+    <div class="sample" style="font-family:'Uthman Hafs'">ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ</div>
+  </div>
+
+  <div class="card">
+    <div class="meta">
+      <span class="family">QPC Symbols</span>
+      <span class="path">Symbols1_Ver02.*</span>
+    </div>
+    <div class="sample" style="font-family:'QPC Symbols'">۝۞ۖۗۘۙۚۛ</div>
+  </div>
+</section>
+
+<footer>
+  <p>License for the fonts: <a href="http://dm.qurancomplex.gov.sa/copyright-2/">KFGQPC</a>. See <a href="https://github.com/nuqayah/qpc-fonts/blob/master/LICENSE">LICENSE</a> for repo terms.</p>
+</footer>
+
+</body>
+</html>

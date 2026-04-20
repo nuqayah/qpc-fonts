@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QPC Fonts — @font-face recipe</title>
+<link rel="stylesheet" href="assets/preview.css">
+<style>
+/* Copy-paste block. Point `src:` at the raw.githubusercontent.com URL for your
+   tagged release, or host the WOFF2 files on your own CDN. */
+
+@font-face {
+  font-family: 'Uthman Naskh';
+  src: local('KFGQPC Uthman Taha Naskh'),
+       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/other-fonts/fonts/UthmanTN1%20Ver10.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Uthman Naskh';
+  font-weight: bold;
+  src: local('KFGQPC Uthman Taha Naskh Bold'), local('KFGQPCUthmanTahaNaskh-Bold'),
+       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/other-fonts/fonts/UthmanTN1B%20Ver10.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Uthman Hafs';
+  src: local('KFGQPC Uthmanic Script HAFS'),
+       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/other-fonts/fonts/UthmanicHafs1%20Ver09.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'QPC Symbols';
+  src: local('KFGQPC Arabic Symbols 01'),
+       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/other-fonts/fonts/Symbols1_Ver02.woff2') format('woff2');
+}
+
+/* Mushaf page fonts: one family per page, plus the basmalah font.
+   Replace NNN with 001–604; these use one glyph per word and need the
+   matching text from hafs-glyphs/v1/data/mushaf.txt. */
+@font-face {
+  font-family: 'Mushaf Ligatures';
+  src: local('QCF_BSML'),
+       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/hafs-glyphs/v1/fonts/QCF_BSML.woff2') format('woff2');
+}
+/* @font-face {
+  font-family: 'Mushaf Page NNN';
+  src: local('QCF_PNNN'),
+       url('https://raw.githubusercontent.com/nuqayah/qpc-fonts/master/hafs-glyphs/v1/fonts/QCF_PNNN.woff2') format('woff2');
+} */
+</style>
+</head>
+<body>
+<header>
+  <h1>@font-face recipe</h1>
+  <p><a href="index.html">← back to preview</a></p>
+</header>
+
+<section class="riwaya">
+  <p style="color:var(--muted)">View source of this page to copy the CSS. For production, pin the <code>raw.githubusercontent.com</code> URLs to a commit SHA or tag instead of <code>master</code> so the assets are immutable.</p>
+
+  <div class="card">
+    <div class="meta"><span class="family">Uthman Naskh</span></div>
+    <div class="sample" style="font-family:'Uthman Naskh'">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+    <div class="sample" style="font-family:'Uthman Naskh';font-weight:bold">ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ</div>
+  </div>
+
+  <div class="card">
+    <div class="meta"><span class="family">Uthman Hafs</span></div>
+    <div class="sample" style="font-family:'Uthman Hafs'">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+  </div>
+
+  <div class="card">
+    <div class="meta"><span class="family">QPC Symbols</span></div>
+    <div class="sample" style="font-family:'QPC Symbols'">۝۞ۖۗۘۙۚۛ</div>
+  </div>
+</section>
+</body>
+</html>
