@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QPC Fonts — @font-face recipes</title>
+<link rel="stylesheet" href="assets/preview.css">
+<style>
+.codeblock { position: relative; margin: 0.5rem 0; }
+.codeblock pre { background: #f3f3ef; border-radius: 6px; padding: 0.9rem 0.9rem 0.9rem 0.9rem; overflow-x: auto; font-size: 0.82rem; line-height: 1.55; margin: 0; }
+.codeblock .copy {
+  position: absolute; top: 0.5rem; right: 0.5rem;
+  background: #fff; border: 1px solid var(--border); color: var(--ink);
+  padding: 0.2rem 0.6rem; font-size: 0.75rem; border-radius: 4px;
+  cursor: pointer; opacity: 0.75;
+}
+.codeblock .copy:hover { opacity: 1; border-color: var(--accent); color: var(--accent); }
+.codeblock .copy.copied { background: var(--accent); color: #fff; border-color: var(--accent); opacity: 1; }
+code { background: #f3f3ef; padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.85rem; }
+.callout { background: #fff7e8; border-left: 3px solid #d4a520; padding: 0.75rem 1rem; margin: 1rem 0; border-radius: 4px; }
+.callout.warn { background: #fff0f0; border-left-color: #d44; }
+h3 { margin-top: 2rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>@font-face recipes</h1>
+  <p><a href="index.html">← back to preview</a></p>
+  <p class="muted">Ready-to-copy CSS for every font in the repo — click the <strong>Copy</strong> button on any block.</p>
+</header>
+
+<section class="riwaya">
+  <h2>1 · Text fonts (regular Unicode Arabic)</h2>
+  <p class="muted">These render normal Arabic text. Use them when you have Unicode strings — any Qur'an text or Arabic prose.</p>
+
+  <h3>General Arabic (not Qur'an-specific)</h3>
+  <p class="muted" style="margin-top:-0.5rem">Uthman Naskh is a general Arabic text face from the KFGQPC — use it for any Arabic prose, not only Qur'an.</p>
+<div class="codeblock"><button class="copy" type="button">Copy</button><pre>/* Uthman Naskh (regular + bold) */
+@font-face {
+  font-family: 'Uthman Naskh';
+  src: local('KFGQPC Uthman Taha Naskh'),
+       url('../other-fonts/fonts/UthmanTN1%20Ver10.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Uthman Naskh';
+  font-weight: bold;
+  src: local('KFGQPC Uthman Taha Naskh Bold'), local('KFGQPCUthmanTahaNaskh-Bold'),
+       url('../other-fonts/fonts/UthmanTN1B%20Ver10.woff2') format('woff2');
+}</pre></div>
+
+  <h3>Hafs</h3>
+<div class="codeblock"><button class="copy" type="button">Copy</button><pre>/* Uthman Hafs — a Hafs-style text face (text font, not a page-glyph font) */
+@font-face {
+  font-family: 'Uthman Hafs';
+  src: local('KFGQPC Uthmanic Script HAFS'),
+       url('../hafs/fonts/UthmanicHafs1%20Ver09.woff2') format('woff2');
+}
+
+/* Uthmanic Hafs v22 (the most current Hafs text font) */
+@font-face {
+  font-family: 'Uthmanic Hafs v22';
+  src: url('../hafs/text/UthmanicHafs_V22/uthmanic_hafs_v22.ttf') format('truetype');
+}
+
+/* Older Hafs variants */
+@font-face {
+  font-family: 'UthmanicHafs1 v13';
+  src: url('../hafs/text/UthmanicHafs1_Ver13/UthmanicHafs1%20Ver13.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'UthmanicHafs1 v13';
+  font-weight: bold;
+  src: url('../hafs/text/UthmanicHafs1_Ver13/UthmanicHafs1B%20Ver13.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'UthmanicHafs v2-1';
+  src: url('../hafs/text/UthmanicHafs_v2-1/UthmanicHafs_v2-1.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'UthmanicHafs V20';
+  src: url('../hafs/text/UthmanicHafs_v20_-font/UthmanicHafs_V20.ttf') format('truetype');
+}
+
+/* Subcontinental Nastaleeq style */
+@font-face {
+  font-family: 'Hafs Nastaleeq';
+  src: url('../hafs/text/HafsNastaleeq%20Ver10/HafsNastaleeq%20Ver10.otf') format('opentype');
+}</pre></div>
+
+  <h3>Other riwayat</h3>
+<div class="codeblock"><button class="copy" type="button">Copy</button><pre>@font-face {
+  font-family: 'Uthmanic Warsh';
+  src: url('../warsh/text/UthmanicWarsh_V21/UthmanicWarsh%20V21.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Uthmanic Qaloun';
+  src: url('../qaloun/text/UthmanicQaloun_V21/UthmanicQaloun%20V21.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Uthmanic Bazzi';
+  src: url('../bazzi/text/UthmanicBazzi_V20/UthmanicBazzi%20V20.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Uthmanic Douri';
+  src: url('../douri/text/UthmanicDouri_V20/UthmanicDouri%20V20.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Uthmanic Qunbul';
+  src: url('../qunbul/text/UthmanicQunbul_V20/UthmanicQunbul%20V20.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Uthmanic Shuba';
+  src: url('../shuba/text/UthmanicShuba_V20/UthmanicShuba%20V20.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Uthmanic Sousi';
+  src: url('../sousi/text/UthmanicSousi_V20/UthmanicSousi%20V20.ttf') format('truetype');
+}</pre></div>
+</section>
+
+<section class="riwaya">
+  <h2>2 · Icon / symbol fonts</h2>
+  <p class="muted">Each codepoint draws a single figure — not a composable letter. <strong>QPC Symbols</strong> is general mushaf annotation marks (sajdah, waqf, etc.) — not tied to any riwaya. <strong>QCF_BSML</strong> is the basmalah ligature set used alongside the v1/v1.5 Hafs page fonts.</p>
+<div class="codeblock"><button class="copy" type="button">Copy</button><pre>/* Mushaf annotation marks (sajdah, waqf, rub el hizb, end-of-ayah, etc.) */
+@font-face {
+  font-family: 'QPC Symbols';
+  src: local('KFGQPC Arabic Symbols 01'),
+       url('../other-fonts/fonts/Symbols1_Ver02.woff2') format('woff2');
+}
+
+/* Basmalah set (primary ligature U+FB51..U+FB56 plus many alternates) */
+@font-face {
+  font-family: 'QPC Basmalah';
+  src: local('QCF_BSML'),
+       url('../hafs-glyphs/v1/fonts/QCF_BSML.woff2') format('woff2');
+}</pre></div>
+</section>
+
+<section class="riwaya">
+  <h2>3 · Page-based glyph fonts</h2>
+
+  <div class="callout warn">
+    <strong>These fonts do not render Unicode Arabic.</strong> Each glyph is a pre-shaped <em>word</em> pinned to a specific mushaf page. You can only render mushaf content you have the matching glyph data for — see <a href="https://github.com/nuqayah/qpc-fonts/blob/master/hafs-glyphs/README.md">hafs-glyphs/README.md</a> and <a href="https://github.com/nuqayah/qpc-fonts/blob/master/warsh-glyphs/README.md">warsh-glyphs/README.md</a> for the data files and format.
+  </div>
+
+  <div class="callout">
+    <strong>Load one font per page.</strong> For v1 / v1.5 / v2, every page has its own font file — don't preload all 604. Declare them lazily as the user navigates, or declare the single page you need. All samples below use page 42 (Ayat al-Kursi) as the example.
+  </div>
+
+  <h3>QPC v1 — one font per page</h3>
+<div class="codeblock"><button class="copy" type="button">Copy</button><pre>/* Basmalah (shared — not per page) */
+@font-face {
+  font-family: 'QCF_BSML';
+  src: url('../hafs-glyphs/v1/fonts/QCF_BSML.woff2') format('woff2');
+}
+
+/* One @font-face per page. Replace NNN with the 3-digit page number (001–604). */
+@font-face {
+  font-family: 'QCF_P042';
+  src: url('../hafs-glyphs/v1/fonts/QCF_P042.woff2') format('woff2');
+}
+/* …QCF_P001 through QCF_P604 available at the same path pattern. */</pre></div>
+
+  <h3>QPC v1.5 — one font per page (same codepoint scheme as v1)</h3>
+<div class="codeblock"><button class="copy" type="button">Copy</button><pre>@font-face {
+  font-family: 'page_42';
+  src: url('../hafs-glyphs/v1.5/fonts/page_42.ttf') format('truetype');
+}
+/* Files: page_1.ttf … page_604.ttf */</pre></div>
+
+  <h3>QPC v2 — one font per page, pages 1–100 only in this repo</h3>
+<div class="codeblock"><button class="copy" type="button">Copy</button><pre>@font-face {
+  font-family: 'QCF2042';
+  src: url('../hafs-glyphs/v2/fonts/QCF2042.ttf') format('truetype');
+}
+/* Files: QCF2001.ttf … QCF2100.ttf (pages 1–100).
+   Pages 101–604 have no font in this repo; use v1/v1.5 or v4 for those. */</pre></div>
+
+  <h3>QPC v4 Hafs — ~13 pages per font</h3>
+<div class="codeblock"><button class="copy" type="button">Copy</button><pre>/* v4 fonts cover page ranges, not single pages. The correct font for each
+   word is the `p` field in hafs-glyphs/v4/data/quran.json. */
+@font-face {
+  font-family: 'QCF4_Hafs_04_W';
+  src: url('../hafs-glyphs/v4/fonts/QCF4_Hafs_04_W.ttf') format('truetype');
+}
+/* Files: QCF4_Hafs_01_W.ttf … QCF4_Hafs_47_W.ttf */</pre></div>
+
+  <h3>QPC v4 Warsh</h3>
+<div class="codeblock"><button class="copy" type="button">Copy</button><pre>@font-face {
+  font-family: 'QCF4_Warsh_04_W';
+  src: url('../warsh-glyphs/v4/fonts/QCF4_Warsh_04_W.ttf') format('truetype');
+}
+/* Files: QCF4_Warsh_01_W.ttf … QCF4_Warsh_51_W.ttf
+   Data: warsh-glyphs/v4/data/quran.json */</pre></div>
+
+  <h3>Rendering page-glyph text in the browser</h3>
+
+  <p class="muted">Two things you need beyond the <code>@font-face</code>:</p>
+
+<div class="codeblock"><button class="copy" type="button">Copy</button><pre>/* 1. PUA codepoints default to LTR in Unicode bidi — force RTL so
+      wrapped lines stay in reading order: */
+.mushaf-page {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  word-break: break-all;      /* allow wrap between any two glyphs */
+}
+
+/* 2. Set font-family to the page/font corresponding to the glyphs you're rendering: */
+.mushaf-page.p42 { font-family: 'QCF_P042'; }   /* v1 */
+.mushaf-page.p42-v15 { font-family: 'page_42'; }   /* v1.5 */
+.mushaf-page.p42-v2 { font-family: 'QCF2042'; }   /* v2 */</pre></div>
+
+<div class="codeblock"><button class="copy" type="button">Copy</button><pre>&lt;!-- v1: look up line `42,...` in hafs-glyphs/v1/data/mushaf.txt,
+     paste its glyphs, set the page font: --&gt;
+&lt;div class="mushaf-page p42"&gt;ﮣﮤﮥﮦﮧﮨﮩﮪﮫﮬﮭﮮ...&lt;/div&gt;</pre></div>
+
+  <p class="muted">For v4, iterate <code>hafs-glyphs/v4/data/quran.json[s-1][v-1]</code> and emit each word with its own font-family <code>QCF4_Hafs_{p:02d}_W</code>.</p>
+</section>
+
+<section class="riwaya">
+  <h2>4 · Live samples (rendered above)</h2>
+  <p class="muted">Every font listed above is rendered with real Qur'an text on <a href="index.html">the main preview</a>, grouped by riwaya.</p>
+</section>
+
+<footer>
+  <p>Fonts © KFGQPC — <a href="http://dm.qurancomplex.gov.sa/copyright-2/">license</a>. See <a href="https://github.com/nuqayah/qpc-fonts/blob/master/LICENSE">LICENSE</a> for repo terms.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.codeblock').forEach(block => {
+  const btn = block.querySelector('.copy');
+  const pre = block.querySelector('pre');
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(pre.textContent);
+      btn.textContent = 'Copied';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1400);
+    } catch {
+      btn.textContent = 'Select & copy manually';
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+:root {
+  --bg: #fafaf7;
+  --ink: #1b1b1b;
+  --muted: #6b6b6b;
+  --accent: #0a7;
+  --border: #e2e2dc;
+  --card: #fff;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); color: var(--ink); }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0 1.25rem 4rem;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+header {
+  padding: 3rem 0 1.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+h1 { margin: 0; font-size: 1.9rem; }
+h1 .ar { font-family: 'Uthman Naskh', serif; font-size: 2.2rem; display: inline-block; margin-left: 0.5rem; }
+header p { color: var(--muted); margin: 0.5rem 0 0; }
+header a { color: var(--accent); }
+
+nav {
+  margin: 1.25rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+nav a {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 0.85rem;
+}
+nav a:hover { border-color: var(--accent); color: var(--accent); }
+
+section.riwaya {
+  margin: 2.5rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 0 0 0.25rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+h2 .count {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 1.5rem 0 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin: 0.75rem 0;
+}
+.card .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.card .family { font-weight: 600; }
+.card .path { color: var(--muted); font-size: 0.8rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+.sample {
+  font-size: 2rem;
+  line-height: 1.9;
+  direction: rtl;
+  text-align: right;
+  padding: 0.5rem 0;
+  min-height: 3rem;
+}
+.sample-large { font-size: 3rem; line-height: 2.1; }
+
+details {
+  margin-top: 0.75rem;
+  border-top: 1px dashed var(--border);
+  padding-top: 0.75rem;
+}
+details summary { cursor: pointer; color: var(--muted); font-size: 0.85rem; }
+details pre {
+  background: #f3f3ef;
+  border-radius: 6px;
+  padding: 0.75rem;
+  overflow-x: auto;
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0;
+}
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+footer a { color: var(--accent); }
+
+/* Variant dropdown */
+.variant-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.variant-row select {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  font-size: 0.9rem;
+  min-width: 18rem;
+  max-width: 100%;
+  font-family: inherit;
+}
+
+/* Inline muted helper paragraphs */
+.muted { color: var(--muted); font-size: 0.9rem; margin: 0.25rem 0 1rem; }
+
+/* Note fallback inside cards (when no glyph/text data is available) */
+.card .note {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  font-style: italic;
+}
+
+/* Page-glyph sample: each PUA glyph is one word.
+   PUA codepoints are LTR by default in Unicode bidi — force them to
+   render in RTL visual order so line wrapping matches reading order. */
+.sample-glyph {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  text-align: center;
+  line-height: 2;
+}
+
+/* Glyph grid for other-fonts tables */
+.glyph-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+.glyph {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.25rem;
+  text-align: center;
+  background: var(--bg);
+  overflow: hidden;            /* clip any residual bleed */
+}
+.glyph .g {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  min-height: 2.2rem;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.glyph .g > span {
+  display: inline-block;
+  transform-origin: center;    /* JS sets `transform: scale(...)` when too wide */
+  white-space: nowrap;
+}
+.glyph .cp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+.glyph .lbl {
+  font-size: 0.65rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+  line-height: 1.2;
+}
